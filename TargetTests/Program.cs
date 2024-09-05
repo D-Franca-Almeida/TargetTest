@@ -151,8 +151,25 @@ namespace TargetTests
             Console.WriteLine("--------------------");
             Console.WriteLine("Próximo Exercício");
             Console.WriteLine("--------------------");
+            Console.WriteLine("5) Escreva um programa que inverta os caracteres de um string."+
+                "\r\n\r\nIMPORTANTE:\r\n"+
+                "a) Essa string pode ser informada através de qualquer entrada de sua preferência "+
+                "ou pode ser previamente definida no código;\r\n"+
+                "b) Evite usar funções prontas, como, por exemplo, reverse;");
+            Console.WriteLine("------------------");
+            Console.WriteLine("Digite a palavra que quer inverter: ");
+            string original = Console.ReadLine();
 
+            
+            string invertida = "";
 
+            for (int i = original.Length - 1; i >= 0; i--)
+            {
+                invertida += original[i];
+            }
+
+            
+            Console.WriteLine("String invertida: " + invertida);
             Console.ReadKey();
 
 
