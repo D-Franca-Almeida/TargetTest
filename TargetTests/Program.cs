@@ -119,6 +119,38 @@ namespace TargetTests
             Console.WriteLine("--------------------");
             Console.WriteLine("Próximo Exercício");
             Console.WriteLine("--------------------");
+            Console.WriteLine("4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:"+"" +
+                "\r\n• SP – R$67.836,43"+
+                "\r\n• RJ – R$36.678,66"+
+                "\r\n• MG – R$29.229,88"+
+                "\r\n• ES – R$27.165,48+"+
+                "\r\n• Outros – R$19.849,53\r\n\r\n"+
+                "Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado" +
+                "teve dentro do valor total mensal da distribuidora.  ");
+            Dictionary<string, double> faturamentoPorEstado = new Dictionary<string, double>
+            {
+            { "SP", 67836.43 },
+            { "RJ", 36678.66 },
+            { "MG", 29229.88 },
+            { "ES", 27165.48 },
+            { "Outros", 19849.53 }
+            };
+            
+            double faturamentoTotal = 0;
+            foreach (var valor in faturamentoPorEstado.Values)
+            {
+                faturamentoTotal += valor;
+            }
+   
+            Console.WriteLine("Percentual de representação por estado:");
+            foreach (var estado in faturamentoPorEstado)
+            {
+                double percentual = (estado.Value / faturamentoTotal) * 100;
+                Console.WriteLine($"{estado.Key}: {percentual:F2}%");
+            }
+            Console.WriteLine("--------------------");
+            Console.WriteLine("Próximo Exercício");
+            Console.WriteLine("--------------------");
 
 
             Console.ReadKey();
